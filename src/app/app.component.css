@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap');
+.container-fluid{
+    font-family: 'Shippori Mincho B1', serif;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links a button{
+    color: #FFAC27;
+}
