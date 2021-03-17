@@ -2,11 +2,15 @@
   <div class="row">
     <div class="col-md-12">
       <div class="nav">
-        <div class="logo"><img src="../assets/logo/lekkify-01.png" alt=""> Let's Buy</div>
-          <div class="links">
+        <div class="logo"><img src="../assets/logo/logo.png" alt=""> <span style="background: #FFAC27; color: #ffff; border-radius: 40px; padding: 2px;">Let's Buy</span></div>
+        <div class="hamburger">
+          <label for="toggle" class="tog-icon">&#9776;</label>
+        </div>
+        <input type="checkbox" id="toggle">
+        <div class="links">
             <a routerLink=""><button class="btn btn-default">Home</button></a>
             <a routerLink="add"><button class="btn btn-default">Add</button></a>
-          </div>
+        </div>
       </div>
       <router-outlet></router-outlet>
     </div>

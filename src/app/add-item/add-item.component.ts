@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormControlName } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { StoreApiService } from '../store-api.service';
 
 @Component({
@@ -10,6 +10,8 @@ import { StoreApiService } from '../store-api.service';
 export class AddItemComponent implements OnInit {
   data = {};
   product_form: FormGroup;
+  success = false;
+  error = false
 
   constructor(private store: StoreApiService) { }
 
@@ -30,13 +32,21 @@ export class AddItemComponent implements OnInit {
   }
 
   onSubmit(){
+    let formData: any = new FormData();
+    formData.append("name", this.product_form.get("name").value);
+    formData.append("price", this.product_form.get("price").value);
+    formData.append("img", this.product_form.get("img").value);
     console.log(this.product_form.value);
     this.data = this.product_form.value
-    this.store.createProduct(this.data).then((res) => {
-      console.log(res)
-    }).catch((e) => {
-      console.log(e)
-    })
+    this.store.createProduct(formData).subscribe(
+      (res) => {console.log(res);
+      this.success = true;
+      },
+      (err) => {
+        console.log(err);
+        this.error = true;
+      }
+    )
     this.product_form.reset();
   }
 
