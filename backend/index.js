@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.urlencoded({extended: true})); 
 app.use(express.json()); 
-pp.use(express.static(path.join(__dirname, '../dist')));
+app.use(express.static(path.join(__dirname, '../dist')));
 app.use('/api', api);
 
 app.get('/*', (req, res) => {
