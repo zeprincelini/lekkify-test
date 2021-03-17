@@ -4,15 +4,7 @@
 
 export const environment = {
   production: false,
-  firebaseConfig : {
-    apiKey: "AIzaSyD6RbRG3cFhSjzMBSyMb1xRllzRrKi9_qs",
-    authDomain: "e-commerce-test-fa2b1.firebaseapp.com",
-    projectId: "e-commerce-test-fa2b1",
-    storageBucket: "e-commerce-test-fa2b1.appspot.com",
-    messagingSenderId: "589426890503",
-    appId: "1:589426890503:web:fb1ff6764406f074d8d7a2",
-    measurementId: "G-RRM25BLKZ0"
-  }
+
 };
 
 /*
