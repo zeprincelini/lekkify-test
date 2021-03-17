@@ -36,11 +36,12 @@ export class AddItemComponent implements OnInit {
     formData.append("name", this.product_form.get("name").value);
     formData.append("price", this.product_form.get("price").value);
     formData.append("img", this.product_form.get("img").value);
-    console.log(this.product_form.value);
-    this.data = this.product_form.value
+    // console.log(this.product_form.value);
+    // this.data = this.product_form.value
     this.store.createProduct(formData).subscribe(
-      (res) => {console.log(res);
-      this.success = true;
+      (res) => {
+        //console.log(res);
+        this.success = true;
       },
       (err) => {
         console.log(err);

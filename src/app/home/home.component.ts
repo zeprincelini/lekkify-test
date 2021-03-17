@@ -13,7 +13,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.store.getProduct().subscribe(
       (res => {this.product_data = res;
-      console.log(this.product_data)})
+      console.log(this.product_data)}),
+      (err => {console.log(err)})
     )
   }
 
