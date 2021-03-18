@@ -2,7 +2,7 @@
     <img src="assets/logo/banner.png" alt="banner" class="img-fluid mx-auto">
   </div>
   <hr>
-<div class="row" *ngIf ="product_data !==null">
+<div class="row" *ngIf ="product_data">
     <div class="col-md-3 col-sm-4 mb-3" *ngFor = "let data of product_data">
         <div class="card shadow">
             <img class="card-img-top" src="{{data.path}}" alt="Product image cap" width="200px" height="auto">
