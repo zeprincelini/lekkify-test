@@ -38,7 +38,7 @@
 }
 
 .banner{
-    background: url(../../assets/logo/banner.png) top center no-repeat;
+    background: url(assets/logo/banner.png) top center no-repeat;
 	background-size: cover;
 	display:table;
 	width:100%;
