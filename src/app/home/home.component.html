@@ -1,12 +1,21 @@
-<div class="row" *ngIf ="product_data !== null">
-    <div class="col-md-3 col-sm-4 mb-3" *ngFor = "let data of product_data">
-        <div class="card shadow">
-            <img class="card-img-top" src="{{data.path}}" alt="Product image cap" width="200px" height="auto">
-            <div class="card-body">
-                <h3 class="card-title">{{data.name}}</h3>
-                <div class="d-flex justify-content-between align-items-center">
-                    <span>${{data.price}}</span>
-                    <button class="btn">Buy</button>
+<div class="row">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="banner text-center">
+                <img src="assets/logo/banner.png" alt="banner" class="img-fluid mx-auto">
+              </div>
+        </div>
+    </div>
+    <div class="row" *ngIf ="product_data !== null">
+        <div class="col-md-3 col-sm-4 mb-3" *ngFor = "let data of product_data">
+            <div class="card shadow">
+                <img class="card-img-top" src="{{data.path}}" alt="Product image cap" width="200px" height="auto">
+                <div class="card-body">
+                    <h3 class="card-title">{{data.name}}</h3>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>${{data.price}}</span>
+                        <button class="btn">Buy</button>
+                    </div>
                 </div>
             </div>
         </div>
