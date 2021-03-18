@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class StoreApiService {
-  url = "api/products"
+  url = "https://frozen-hamlet-82359.herokuapp.com/api/products"
 
   constructor(private http: HttpClient) { }
 
